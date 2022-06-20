@@ -22,9 +22,9 @@ var messaging = firebase.messaging();
 ```
 ### Executing program
 ```
-* php spark migrate
-* php spark serve
-```
+1. php spark migrate
+2. php spark serve
+3. http://localhost:8080 or your domain
 
 ### Login User Access Roles
 1. Login as Maker
@@ -34,7 +34,7 @@ email: rudi@mail.com
 password: test1234
 ```
 2. Login as Checker
-
+  
 ```
 email: jono@mail.com
 password: test1234
