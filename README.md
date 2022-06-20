@@ -24,7 +24,7 @@ var messaging = firebase.messaging();
 ~~~
 1. php spark migrate
 2. php spark serve
-3. http://localhost:8080/login or your domain
+3. http://localhost:8080/login or http://www.yourdomain.com/login
 ~~~
 ### Login User Access Roles
 1. Login as Maker
