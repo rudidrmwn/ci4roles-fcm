@@ -30,7 +30,8 @@ var messaging = firebase.messaging();
 1. Login as Maker
 
 ```
-email: rudi@m
+email: rudi@mail.com
+l
 password: test1234
 ```
 2. Login as Checker
