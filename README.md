@@ -23,8 +23,9 @@ var messaging = firebase.messaging();
 ### Executing program
 ~~~
 1. php spark migrate
-2. php spark serve
-3. http://localhost:8080/login or http://www.yourdomain.com/login
+2. php spark db:seed UserSeeder
+3. php spark serve
+4. http://localhost:8080/login or http://www.yourdomain.com/login
 ~~~
 ### Login User Access Roles
 1. Login as Maker
