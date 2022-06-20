@@ -21,16 +21,16 @@ firebase.initializeApp(firebaseConfig);
 var messaging = firebase.messaging();
 ```
 ### Executing program
-```
+~~~
 1. php spark migrate
 2. php spark serve
 3. http://localhost:8080 or your domain
-
+~~~
 ### Login User Access Roles
 1. Login as Maker
 
 ```
-email: rudi@mail.com
+email: rudi@m
 password: test1234
 ```
 2. Login as Checker
