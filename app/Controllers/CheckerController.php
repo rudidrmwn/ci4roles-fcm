@@ -8,7 +8,7 @@ use App\Models\UserModel;
 
 class CheckerController extends BaseController
 {
-	public function __construct()
+    public function __construct()
     {
         if (session()->get('role') != "checker") {
             echo 'Access denied';

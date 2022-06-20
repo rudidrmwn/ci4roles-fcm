@@ -8,7 +8,7 @@ use App\Models\UserModel;
 
 class MakerController extends BaseController
 {
-	public function __construct()
+    public function __construct()
     {
         if (session()->get('role') != "maker") {
             echo 'Access denied';

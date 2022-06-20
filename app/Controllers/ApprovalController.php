@@ -8,7 +8,7 @@ use App\Models\UserModel;
 
 class ApprovalController extends BaseController
 {
-	public function __construct()
+    public function __construct()
     {
         if (session()->get('role') != "approval") {
             echo 'Access denied';
