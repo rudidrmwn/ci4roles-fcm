@@ -31,7 +31,6 @@ var messaging = firebase.messaging();
 
 ```
 email: rudi@mail.com
-l
 password: test1234
 ```
 2. Login as Checker
