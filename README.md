@@ -6,6 +6,19 @@ Send Notification using Codeigniter 4 and Firebase Cloud Messaging (FCM)
 ```
 * composer install
 * setting configuration hostname, username, password and database in path Config/Database.php or .env files
+* setting firebase account on your account
+var firebaseConfig = { 
+    apiKey: "xxxxxx",
+    authDomain: "xxxxx.firebaseapp.com",
+    projectId: "xxxxx",
+    storageBucket: "xxxxx.appspot.com",
+    messagingSenderId: "xxxxx",
+    appId: "xxxx"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+var messaging = firebase.messaging();
 ```
 ### Executing program
 ```
