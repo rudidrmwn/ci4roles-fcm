@@ -67,7 +67,7 @@
 
 		messaging.onMessage(function(payload) {
 		    console.log('onMessage');
-		    navigator.serviceWorker
+			navigator.serviceWorker
 		    .register('/assets/js/firebase-messaging-sw.js')
 		    .then(function (registration) {
 		        console.log("Service Worker Registered");

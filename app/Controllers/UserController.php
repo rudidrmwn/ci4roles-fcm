@@ -73,6 +73,7 @@ class UserController extends BaseController
 
     public function logout()
     {
+        unset($_COOKIE['fcmToken']); 
         session()->destroy();
         return redirect()->to('login');
     }

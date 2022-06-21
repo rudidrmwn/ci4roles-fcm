@@ -47,6 +47,7 @@
                     </span><i></i>
                   </li>
                 </ul>
+                <div id="listingApproval">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -79,6 +80,7 @@
                     <?php endforeach;?> 
                     </tbody>
                 </table>
+                </div>
                  <!-- Modal Review Task-->
                 <form action="<?=base_url('/approval/task/update')?>" method="post">
                     <div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -134,19 +136,19 @@ $(document).ready(function(){
         $('.task_description').val(description);
         $('#reviewModal').modal('show');
     });
-
-    function fetch() {
-        $.getJSON("<?=base_url('/approval/task/notif')?>", function(datas) {
-            $("#notif").html(datas.length);
-
-            jQuery.each( datas, function( i, val ) {
-                $(".notifications-wrapper").append('<a class="content" href="#"><div class="notification-item"><h4 class="item-title">'+ val.task_title +'</h4><p class="item-info">'+ val.task_description +'</p></div></a>')
-            });
-        });
-    }
-    
-    setInterval(fetch, 3000);
-    fetch();
 });
+function approvalNotification() {
+    $.getJSON("<?=base_url('/approval/task/notif')?>", function(datas) {
+        $("#notif").html(datas.length);
+        $('.notification-item').remove()
+        $('.item-info').remove()
+        jQuery.each( datas, function( i, val ) {
+            $(".notifications-wrapper").append('<a class="content btn-review" href="#"><div class="notification-item"><h4 class="item-title">'+ val.task_title +'</h4><p class="item-info">'+ val.task_description +'</p></div></a>')
+        });
+
+    });
+}
+setInterval(approvalNotification, 1000);
+approvalNotification();
 </script>
 <?= $this->endSection() ?>
