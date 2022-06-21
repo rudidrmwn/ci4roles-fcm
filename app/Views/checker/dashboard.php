@@ -46,7 +46,7 @@
                     </span><i></i>
                   </li>
                 </ul>
-                <div id="listing">
+                <div id="listingChecked">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -134,6 +134,10 @@ $(document).ready(function(){
         $('.task_description').val(description);
         $('#reviewModal').modal('show');
     });
+
+    $('.viewChecked').on("click", function(){
+        $('#listingChecked').load("<?=base_url('/checker')?> #listingChecked");
+    });
 });
 
 
@@ -143,14 +147,13 @@ function checkerNotification() {
         $('.notification-item').remove()
         $('.item-info').remove()
         jQuery.each( datas, function( i, val ) {
-            $(".notifications-wrapper").append('<a class="content btn-review" href="#"><div class="notification-item"><h4 class="item-title">'+ val.task_title +'</h4><p class="item-info">'+ val.task_description +'</p></div></a>')
+            $(".notifications-wrapper").append('<a class="content viewChecked" href="<?=base_url('/checker')?>"><div class="notification-item"><h4 class="item-title">'+ val.task_title +'</h4><p class="item-info">'+ val.task_description +'</p></div></a>')
         });
     });
 }
-// setInterval(checkerNotification, 1000);
-// checkerNotification();
+setInterval(checkerNotification, 1000);
+checkerNotification();
 
-// $("#listing").load("<?=base_url('/checker')?> #listing");
 </script>
 
 <?= $this->endSection() ?>

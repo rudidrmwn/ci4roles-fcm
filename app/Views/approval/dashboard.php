@@ -143,7 +143,7 @@ function approvalNotification() {
         $('.notification-item').remove()
         $('.item-info').remove()
         jQuery.each( datas, function( i, val ) {
-            $(".notifications-wrapper").append('<a class="content btn-review" href="#"><div class="notification-item"><h4 class="item-title">'+ val.task_title +'</h4><p class="item-info">'+ val.task_description +'</p></div></a>')
+            $(".notifications-wrapper").append('<a class="content btn-review" href="<?=base_url('/approval')?>"><div class="notification-item"><h4 class="item-title">'+ val.task_title +'</h4><p class="item-info">'+ val.task_description +'</p></div></a>')
         });
 
     });
